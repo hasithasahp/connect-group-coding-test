@@ -96,3 +96,32 @@ Run the file by
 ```
 node challenge_2/index
 ```
+
+## Challenge 04
+
+### Given Task
+
+Create an application service "groupByOwnersService" to process the array given and return it in the desired format with a test to check the functionality.
+
+For example, for associative array
+
+```
+["insurance.txt" => "Company A", "letter.docx" => "Company A", "Contract.docx" => "Company B"]
+```
+
+the groupByOwnersService function should return
+
+```
+["Company A" => ["insurance.txt", "letter.docx"], "Company B" => ["Contract.docx"]]
+```
+
+### Setup Environment
+
+Same as the startup in challenge 01
+
+#### **Request Information**
+
+URL: `GET http://127.0.0.1:8000/group-by-owner`
+
+with a raw data body with the input
+
