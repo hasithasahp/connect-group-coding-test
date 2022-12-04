@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, Routes, Route } from 'react-router-dom';
+import AttendanceList from './components/attendance-list.component';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
       <div className="container mt-3">
         <Routes>
+          <Route path="/attendance" element={<AttendanceList/>} />
         </Routes>
       </div>
     </div>
