@@ -31,6 +31,14 @@ php artisan serve
 
 ```
 
+use a seperate terminal to setup frontend
+
+```
+npm install
+
+npm start
+```
+
 #### **API Endpoint for upload attendance**
 
 URL: `api/attendance/upload`   
