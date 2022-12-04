@@ -1,6 +1,11 @@
 # connect-group-coding-test
 Assessment to choose candidates for UAE Project from JIThpl
 
+Branches are seperatly created for challenges
+Checkout to required branch to access challenge data
+
+Challenge 01 - `challenge_1`
+
 
 ## Challenge 01
 
