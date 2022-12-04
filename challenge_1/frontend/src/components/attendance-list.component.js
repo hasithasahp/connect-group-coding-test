@@ -1,5 +1,6 @@
 import React,{ Component } from "react";
 import Table from 'react-bootstrap/Table';
+import attendanceService from "../services/attendance.service";
 
 
 export default class AttendanceList extends Component {
@@ -18,6 +19,16 @@ export default class AttendanceList extends Component {
     }
 
     retrieveData() {
+        attendanceService.getAll()
+            .then(response => {
+                this.setState({
+                    records: response.data
+                });
+                console.log(response.data);
+            })
+            .catch(e => {
+                console.log(e);
+            });
     }
 
     render() {
@@ -34,6 +45,14 @@ export default class AttendanceList extends Component {
             </tr>
             </thead>
             <tbody>
+            { records && records.map(({ employee, checkin_at, checkout_at, worked_hours }, index) => (
+                <tr key={ index }>
+                    <td>{ employee.name }</td>
+                    <td>{ (worked_hours > 0)  ? checkin_at : 'N/A' }</td>
+                    <td>{ (worked_hours > 0)  ? checkout_at : 'N/A' }</td>
+                    <td>{ worked_hours }</td>
+                </tr>
+            )) }
             </tbody>
         </Table>);
     }
