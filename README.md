@@ -5,6 +5,7 @@ Branches are seperatly created for challenges
 Checkout to required branch to access challenge data
 
 Challenge 01 - `challenge_1`
+Challenge 02 - `challenge_2`
 
 
 ## Challenge 01
@@ -65,9 +66,33 @@ Eg: `http://127.0.0.1:8000/api/attendance`
 
 This endpoint returns all the attendance information
 
-### **View for attendance information**  
+#### **View for attendance information**  
 
 URL: `attendance`
 Eg: `http://127.0.0.1:3000/attendance`  
 
 
+## Challenge 02
+
+### Given Task
+
+Given an array a[] of size N which contains elements from 0 to N-1, you need to find all the elements occuring more than once in the given array.  
+
+Example:  
+
+Input:  N = 5  a[] = { 2, 3, 1, 2, 3 };
+
+Output: 2 3
+
+Explanation: 2 and 3 occur more than once in the given array.
+
+
+### Steps to execute
+
+The `challenge_2/index.js` file is containing the necessary logic.
+
+Run the file by
+
+```
+node challenge_2/index
+```
