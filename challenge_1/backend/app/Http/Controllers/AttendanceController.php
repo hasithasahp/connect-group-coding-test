@@ -104,7 +104,7 @@ class AttendanceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $emp_id)
+    public function show(int $emp_id, AttendanceService $attServe)
     {
         $emp = Employee::find($emp_id);
 
@@ -115,19 +115,14 @@ class AttendanceController extends Controller
                     ], Response::HTTP_NOT_FOUND);
         }
 
-        $EmpAttendance = Attendance::select(
-                                        'id',
-                                        'checkin_at', 
-                                        'checkout_at', 
-                                        'worked_hours',
-                                    )->where('emp_id', $emp_id);
+        $EmpAttendance = $attServe->getEmployeeAttendance($emp_id);
 
         return response()
                 ->json([
                     'emp_id' => $emp->id, 
                     'name' => $emp->name,
-                    'total_worked_hours' => $EmpAttendance->sum('worked_hours'),
-                    'attendance' => $EmpAttendance->get(),
+                    'total_worked_hours' => $EmpAttendance['worked_hours'],
+                    'attendance' => $EmpAttendance['attendance'],
                 ]);
     }
 
