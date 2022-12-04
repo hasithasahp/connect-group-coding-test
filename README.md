@@ -34,7 +34,21 @@ php artisan serve
 #### **API Endpoint for upload attendance**
 
 URL: `api/attendance/upload`   
-eg: `http://127.0.0.1:8000/api/attendance/upload`
+Eg: `http://127.0.0.1:8000/api/attendance/upload`
 
 API endpoint for uploading excel attendance accepts file with attribute `uploaded_file`.
+
+#### **API Endpoint for attendance of employee**
+
+URL: `api/attendance/employee/{employee_id}`  
+Eg: `http://127.0.0.1:8000/api/attendance/employee/1`  
+
+This will return attendance information on the given employee
+
+#### **API Endpoint for all attendance information**  
+
+URL: `api/attendance`  
+Eg: `http://127.0.0.1:8000/api/attendance`  
+
+This endpoint returns all the attendance information
 
