@@ -60,3 +60,9 @@ Eg: `http://127.0.0.1:8000/api/attendance`
 
 This endpoint returns all the attendance information
 
+### **View for attendance information**  
+
+URL: `attendance`
+Eg: `http://127.0.0.1:3000/attendance`  
+
+
